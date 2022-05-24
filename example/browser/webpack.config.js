@@ -17,9 +17,9 @@ module.exports = {
       dns: false,
       zlib: false,
       stream: require.resolve('stream-browserify'),
-      events: require.resolve('events/'),
-      buffer: require.resolve('buffer/'),
-      url: require.resolve('url/'),
+      events: require.resolve('events'),
+      buffer: require.resolve('buffer'),
+      url: require.resolve('url'),
       http: require.resolve('stream-http'),
       https: require.resolve('https-browserify'),
       crypto: require.resolve('crypto-browserify'),
@@ -40,6 +40,9 @@ module.exports = {
     new webpack.DefinePlugin({
       'process.browser': true,
       'process.env.NODE_DEBUG': false
+    }),
+    new webpack.ProvidePlugin({
+      Buffer: ['buffer', 'Buffer'],
     })
   ]
   // https-proxy-agent and socks-proxy-agent is node library, so can't compile for browser.
