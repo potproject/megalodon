@@ -1,4 +1,4 @@
-import WS from 'ws'
+import WS from 'isomorphic-ws'
 import dayjs, { Dayjs } from 'dayjs'
 import { EventEmitter } from 'events'
 import proxyAgent, { ProxyConfig } from '../proxy_config'

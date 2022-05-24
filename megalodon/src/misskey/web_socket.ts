@@ -1,4 +1,4 @@
-import WS from 'ws'
+import WS from 'isomorphic-ws'
 import dayjs, { Dayjs } from 'dayjs'
 import { v4 as uuid } from 'uuid'
 import { EventEmitter } from 'events'
